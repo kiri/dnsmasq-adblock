@@ -1,0 +1,14 @@
+#
+#
+#
+app-measurement.com
+
+treasuredata.com
+twitter.com
+gstatic.com
+microsoft.com
+google-analytics.l.google.com
+googletagmanager.com
+www-googletagmanager.l.google.com
+analytics.query.yahoo.com
+
