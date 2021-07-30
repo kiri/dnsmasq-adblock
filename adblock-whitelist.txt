@@ -10,4 +10,4 @@ google-analytics.l.google.com
 googletagmanager.com
 www-googletagmanager.l.google.com
 analytics.query.yahoo.com
-ad.doubleclick.net
+doubleclick.net
