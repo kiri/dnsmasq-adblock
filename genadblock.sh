@@ -19,11 +19,11 @@ trap 'rm $wlist' 1 2 3 15 EXIT
         done | tail -n +2 | grep -v '^#' | grep -v '^\s*$' | tr -d '\r' | awk '{print "address=/"$1"/::\naddress=/"$1"/0.0.0.0"}'
 ) | grep -v -f $wlist | sort | uniq > /etc/dnsmasq.d/adblock.conf
 
-cat $wlist | \
-        while read line
-        do
-                dig @1.1.1.1 $line +noall +answer | awk -v awk_line="$line" '{if($4 == "A")print "address=/"awk_line"/"$5}'
-        done >>  /etc/dnsmasq.d/adblock.conf
+#cat $wlist | \
+#       while read line
+#               do
+#               dig @1.1.1.1 $line +noall +answer | awk -v awk_line="$line" '{if($4 == "A")print "address=/"awk_line"/"$5}'
+#               done >>  /etc/dnsmasq.d/adblock.conf
 
 systemctl restart dnsmasq
 
